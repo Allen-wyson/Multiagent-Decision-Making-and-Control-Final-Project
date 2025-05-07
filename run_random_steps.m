@@ -27,7 +27,7 @@ h1 = plot(ax, car1.pos-0.5, car1.lane-0.5, 'bo', ...
 h2 = plot(ax, car2.pos-0.5, car2.lane-0.5, 'rs', ...
           'MarkerSize',10, 'LineWidth',2);
 
-%% Main loop: random moves
+%% Main loop: random moves --> to be replaced with SE-IBR algorithm
 for step = 1:maxSteps
     if car1.pos >= trackLength || car2.pos >= trackLength
         break;  % stop if any car reached finish
@@ -41,6 +41,8 @@ for step = 1:maxSteps
     idx1 = randi(numel(actions1));
     idx2 = randi(numel(actions2));
     plan1 = actions1{idx1};   % k×2 array of [lane,pos]
+
+    
     plan2 = actions2{idx2};
 
     %--- delete previous dashed paths and x‐markers if any ---

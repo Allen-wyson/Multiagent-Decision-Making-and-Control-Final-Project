@@ -7,7 +7,7 @@ car1.pos  = 1;    % starting position
 car2.lane = 3;    
 car2.pos  = 1;
 
-creat_racetrack;
+create_racetrack;
 % after drawing the track:
 hold on;
 
@@ -20,8 +20,8 @@ h2 = plot(car2.pos-0.5, car2.lane-0.5, 'ms', 'MarkerSize',12, 'LineWidth',2);
 drawnow;
 
 
-car1Plan = enumerateActions(car1.lane, car1.pos);
-car2Plan = enumerateActions(car2.lane, car2.pos);
+car1Plan = enumerateActions(car1.lane, car1.pos, 3);
+car2Plan = enumerateActions(car2.lane, car2.pos, 3);
 
 % Example: car1 does first action of its plan
 action1 = car1Plan{1};   % a k×2 matrix

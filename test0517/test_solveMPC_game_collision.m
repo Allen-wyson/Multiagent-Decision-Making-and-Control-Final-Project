@@ -1,6 +1,6 @@
 %% test_solveMPC_game_collision.m
 clc; clear; close all;
-
+addpath('utils'); 
 % 1) Build a straight track
 Xw = linspace(0,50,20)';
 centerline = [Xw, zeros(size(Xw))];

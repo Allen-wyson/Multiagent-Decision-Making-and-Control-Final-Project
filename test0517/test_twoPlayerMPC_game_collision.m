@@ -1,5 +1,6 @@
 %% test_twoPlayerMPC_game_collision.m
 clc; clear; close all;
+addpath('utils');
 % Two-player zero-sum MPC with soft collision & track-width constraints
 
 % build a simple straight track for demo
